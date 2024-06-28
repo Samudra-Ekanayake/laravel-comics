@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
 
-    <h1>Welcome</h1>
+    <h1>{{ $titolo }}</h1>
+    <p>{{ $descrizione }}</p>
+    <p>{{ $funziona }}</p>
+
+
 </head>
 <body>
     

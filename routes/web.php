@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $data = [
+        "titolo" => "proviamo ad esercitarci con laravel",
+        "descrizione" => "sembra facile dai",
+        "funziona" => "funziona tutto bene"
+    ];
+    return view('welcome', $data);
 });
 
 Route::get('/credits', function () {
