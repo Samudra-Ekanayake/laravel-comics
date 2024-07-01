@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Route::get('/layout', function () {
+
+    return view('layout.layout');
+})->name("layout"); */
+
+
+Route::get('/header', function () {
+
+    return view('sections.header');
+})->name("header");
+
+
 Route::get('/', function () {
 
     $data = [
@@ -20,16 +32,14 @@ Route::get('/', function () {
         "descrizione" => "sembra facile dai",
         "funziona" => "funziona tutto bene"
     ];
-    return view('welcome', $data);
-});
+    return view('sections.altro', $data);
+})->name("altro");
 
 Route::get('/fumetti', function () {
 
     $data = [
-
-      "fumetti" => config("store")
-
+        "fumetti" => config("store")
     ];
 
-    return view('home', $data);
-});
+    return view('sections.main', $data);
+})->name("main");
