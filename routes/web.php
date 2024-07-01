@@ -23,9 +23,13 @@ Route::get('/', function () {
     return view('welcome', $data);
 });
 
-Route::get('/movies', function () {
+Route::get('/fumetti', function () {
 
-    $data = config("store");
+    $data = [
 
-    return view('movies', $data);
+      "fumetti" => config("store")
+
+    ];
+
+    return view('home', $data);
 });
