@@ -23,6 +23,9 @@ Route::get('/', function () {
     return view('welcome', $data);
 });
 
-Route::get('/credits', function () {
-    return view('home');
+Route::get('/movies', function () {
+
+    $data = config("store");
+
+    return view('movies', $data);
 });
