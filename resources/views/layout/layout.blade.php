@@ -10,12 +10,14 @@
 </head>
 
 <body>
-    {{-- @include('sctions.header')
+      @include('sections.header') 
 
     <div class="content">
         @yield('content')
     </div>
- --}}
+
+    
+ 
 
 
 

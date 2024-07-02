@@ -3,6 +3,7 @@
 
 
 
+@section('content')
     <h1>Fumetti</h1>
 
     {{-- <img src="{{ $fumetto['thumb'] }}" alt="{{ $fumetto['title'] }}" style="width:100px;height:auto;">
@@ -14,20 +15,17 @@
                 <p><strong>Tipo:</strong> {{ $fumetto['type'] }}</p>
             </li> --}}
 
-    {{-- @section('content') --}}   
     <div class="container">
         <ul>
             @foreach ($fumetti as $fumetto)
-            <div class="cards">
-                <li>
-                    <img src="{{ $fumetto['thumb'] }}" alt="">
-                    <p>{{ $fumetto['title'] }}</p>
-                    <p>{{ $fumetto['description'] }}</p>
-                </li>
-            </div>
+                <div class="cards">
+                    <li>
+                        <img src="{{ $fumetto['thumb'] }}" alt="">
+                        <p>{{ $fumetto['title'] }}</p>
+                        <p>{{ $fumetto['description'] }}</p>
+                    </li>
+                </div>
             @endforeach
         </ul>
     </div>
-    {{-- @endsection  --}}       
-    
-
+@endsection

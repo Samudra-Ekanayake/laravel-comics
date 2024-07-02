@@ -19,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 })->name("layout"); */
 
 
-Route::get('/header', function () {
+/* Route::get('/header', function () {
 
     return view('sections.header');
-})->name("header");
+})->name("header"); */
 
 
 Route::get('/', function () {
@@ -32,7 +32,7 @@ Route::get('/', function () {
         "descrizione" => "sembra facile dai",
         "funziona" => "funziona tutto bene"
     ];
-    return view('sections.altro', $data);
+    return view('altro', $data);
 })->name("altro");
 
 Route::get('/fumetti', function () {
@@ -41,5 +41,5 @@ Route::get('/fumetti', function () {
         "fumetti" => config("store")
     ];
 
-    return view('sections.main', $data);
+    return view('main', $data);
 })->name("main");
